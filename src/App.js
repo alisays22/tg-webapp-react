@@ -5,9 +5,9 @@ import './App.css';
 const tg = window.Telegram.WebApp;
 function App() {
 
-  useEffect = () =>{
+  useEffect(() => {
 tg.ready()
-  }
+  })
 
 const Onclose = () =>{
 tg.close()
