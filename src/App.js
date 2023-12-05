@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { useTelegram } from './comonents/hooks/useTelegram';
 
-const tg = window.Telegram.WebApp;
+// const tg = window.Telegram.WebApp;
 
 
 
