@@ -3,11 +3,7 @@ import "./Header.css"
 import Button from '../Button/Button';
 
 const Handler = () => {
-    const tg = window.Telegram.WebApp;
-    const Onclose = () =>{
-        tg.close()
-        }
-
+ 
     return (
         <div className = {'header'}>
             <Button onClick={onclose}>Закрыть</Button>
