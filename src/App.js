@@ -9,9 +9,8 @@ const tg = window.Telegram.WebApp;
 function App() {
   const {OnToggleButton, tg} = useTelegram()
 
-
   useEffect(() => {
-    tg.read()
+    tg.ready()
   }, []);
 
   return <div className="App">
