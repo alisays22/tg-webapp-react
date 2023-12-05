@@ -3,7 +3,7 @@ import "./Header.css"
 import Button from '../Button/Button';
 import { useTelegram } from '../../hooks/useTelegram';
 
-const Handler = () => {
+const Header = () => {
 const {user, onClose} = useTelegram()
     return (
         <div className = {'header'}>
@@ -15,4 +15,4 @@ const {user, onClose} = useTelegram()
     );
 };
 
-export default Handler;
+export default Header;
