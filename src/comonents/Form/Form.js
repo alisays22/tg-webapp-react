@@ -7,11 +7,12 @@ const Form = () => {
     const [street, setStreet] = useState("");
     const [subject, setSubject] = useState("physical");
 const {tg} = useTelegram()
+
     useEffect(() =>{
 tg.MainButton.setPatams({
     text: "Отправить данные"
 }) 
-    },[tg.MainButton])
+    },[])
 
     useEffect(() =>{
        if(!street || !country ){
@@ -19,7 +20,7 @@ tg.MainButton.setPatams({
        }else{
         tg.MainButton.show()
        }
-            },[country, street, tg.MainButton]) 
+            },[country, street]) 
 
     const onChangeCountry = (e) => {
         setCountry(e.target.value);
