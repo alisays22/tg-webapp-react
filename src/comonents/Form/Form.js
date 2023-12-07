@@ -3,6 +3,8 @@ import "./Form.css"
 import { useTelegram } from '../../hooks/useTelegram';
 
 const Form = () => {
+    console.log("Form component rendered");
+
     const [country, setCountry] = useState("");
     const [street, setStreet] = useState("");
     const [subject, setSubject] = useState("physical");
@@ -10,7 +12,7 @@ const {tg} = useTelegram()
 
 
     useEffect(() =>{
-tg.MainButton.setPatams({
+tg.MainButton.setParams({
     text: "Отправить данные"
 }) 
     },[tg.MainButton])
