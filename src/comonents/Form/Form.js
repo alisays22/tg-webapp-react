@@ -9,13 +9,13 @@ const [street, setStreet] = useState("");
 const [subject, setSubject] = useState("physical");
 const {tg} = useTelegram()
 
-const onSendData = useCallback(() => {
+const onSendData = useCallback(async() => {
     const data = {
       country,
       street,
       subject,
     };
-    tg.sendData(JSON.stringify(data));
+   await  tg.sendData(JSON.stringify(data));
   }, [country, street, subject, tg]);
 
 
