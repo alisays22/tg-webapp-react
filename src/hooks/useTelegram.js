@@ -1,8 +1,8 @@
-import React, {useState } from 'react';
+import {useState } from 'react';
 const tg = window.Telegram.WebApp;
 
 export function useTelegram() {
- // Инициализируем состояние счетчика
+// eslint-disable-next-line no-unused-vars
  const [count, setCount] = useState(0);
 
 
@@ -16,6 +16,7 @@ tg.close()
       setCount((prevCount) => {
         const newCount = prevCount + 1;
         tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
+     
         return newCount;
       });
       tg.MainButton.hide();
