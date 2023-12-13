@@ -27,7 +27,7 @@ tg.close()
   const OnToggleButton = () => {
     if (tg.MainButton.isVisible) {
       tg.MainButton.hide();
-      tg.MainButton.setText(`Вы выбрали товар ${count++}`)
+      tg.MainButton.setText(`Вы выбрали товар`)
     } else {
       tg.MainButton.show();
     }
