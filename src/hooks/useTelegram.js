@@ -8,6 +8,7 @@ tg.close()
   const OnToggleButton = () => {
     if (tg.MainButton.isVisible) {
       tg.MainButton.hide();
+      tg.MainButton.setText("Вы выбрали това")
     } else {
       tg.MainButton.show();
     }
