@@ -36,7 +36,7 @@ const {user, onClose} = useTelegram()
     return (
         <div className = {'header'}>
             <Button onClick={onClose}>Закрыть</Button>
-            <Button onClick={getData}>Отправить сообщение</Button>
+            <Button>Отправить сообщение</Button>
             <span className= {'username'}>
                 {user?.username}
                 </span>
