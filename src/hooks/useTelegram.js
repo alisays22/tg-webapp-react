@@ -11,18 +11,16 @@ tg.close()
   };
 
   const OnCountButton = () => {
-    if (tg.MainButton.isVisible) {
+
       // Увеличиваем счетчик и обновляем текст кнопки
       setCount((prevCount) => {
         const newCount = prevCount + 1;
+        tg.MainButton.show();
         tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
-     
         return newCount;
       });
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-    }
+
+
   };
 
   const OnToggleButton = () => {
