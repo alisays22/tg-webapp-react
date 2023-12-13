@@ -10,17 +10,22 @@ export function useTelegram() {
 tg.close()
   };
 
-  const OnCountButton = () => {
+  const increaseCounter = () => {
+    setCount((prevCount) => {
+      const newCount = prevCount + 1;
+      tg.MainButton.show();
+      tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
+      return newCount;
+    });
+  };
 
-      // Увеличиваем счетчик и обновляем текст кнопки
-      setCount((prevCount) => {
-        const newCount = prevCount + 1;
-        tg.MainButton.show();
-        tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
-        return newCount;
-      });
-
-
+  const decreaseCounter = () => {
+    setCount((prevCount) => {
+      const newCount = Math.max(0, prevCount - 1); // Предотвращаем получение отрицательного значения
+      tg.MainButton.show();
+      tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
+      return newCount;
+    });
   };
 
   const OnToggleButton = () => {
@@ -38,8 +43,9 @@ tg.close()
 
   return {
     onClose,
+    increaseCounter,
+    decreaseCounter,
     OnToggleButton,
-    OnCountButton,
     getData,
     tg,
     user: tg.initDataUnsafe?.user,
