@@ -18,16 +18,6 @@ const onSendData = useCallback(async() => {
    await  tg.sendData(JSON.stringify(data));
   }, [country, street, subject, tg]);
 
-
-
-  useEffect(() => {
-    tg.WebApp.onEvent('mainButtonClicked', onSendData);
-    return () => {
-      tg.WebApp.offEvent('mainButtonClicked', onSendData);
-    };
-  }, [tg.WebApp]);
-
-
 useEffect(() => {
   tg.WebApp.onEvent('mainButtonClicked', onSendData);
   return () => {

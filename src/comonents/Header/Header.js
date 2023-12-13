@@ -4,39 +4,13 @@ import Button from '../Button/Button';
 import { useTelegram } from '../../hooks/useTelegram';
 
 const Header = () => {
-const {user, onClose} = useTelegram()
+const {user, onClose,OnToggleButton} = useTelegram()
 
-
-// useTelegram() {
-//     const onClose = () => {
-//   tg.close()
-//     };
-  
-//     const OnToggleButton = () => {
-//       if (tg.MainButton.isVisible) {
-//         tg.MainButton.hide();
-//         tg.MainButton.setText("Вы выбрали това")
-//       } else {
-//         tg.MainButton.show();
-//       }
-//     };
-
-//     // const getData = () =>{
-
-//     // }
-  
-//     return {
-//       onClose,
-//       OnToggleButton,
-//       tg,
-//       user: tg.initDataUnsafe?.user,
-//     };
-//   }
   
     return (
         <div className = {'header'}>
             <Button onClick={onClose}>Закрыть</Button>
-            <Button>Отправить сообщение</Button>
+            <Button onClick={OnToggleButton}>Отправить сообщение</Button>
             <span className= {'username'}>
                 {user?.username}
                 </span>

@@ -14,9 +14,14 @@ tg.close()
     }
   };
 
+  const getData = () =>{
+    tg.setData();
+        }
+
   return {
     onClose,
     OnToggleButton,
+    getData,
     tg,
     user: tg.initDataUnsafe?.user,
   };
