@@ -21,9 +21,19 @@ tg.close()
 
   const decreaseCounter = () => {
     setCount((prevCount) => {
-      const newCount = Math.max(0, prevCount - 1); // Предотвращаем получение отрицательного значения
-      tg.MainButton.show();
+      // Определяем новое значение счётчика
+      const newCount = prevCount - 1;
+      // Обновляем текст основной кнопки
       tg.MainButton.setText(`Вы выбрали товар ${newCount}`);
+  
+      // Если newCount равен 0, скрываем основную кнопку
+      if (newCount <= 0) {
+        tg.MainButton.hide();
+      } else {
+        tg.MainButton.show();
+      }
+  
+      // Возвращаем обновлённое значение счётчика
       return newCount;
     });
   };
