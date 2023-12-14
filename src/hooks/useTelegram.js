@@ -19,15 +19,20 @@ tg.close()
   const OnToggleButton = () => {
     if (tg.MainButton.isVisible) {
       tg.MainButton.hide();
-      tg.MainButton.setText(`Вы выбрали товар`)
+      tg.MainButton.setText(`КНОПКА`)
     } else {
       tg.MainButton.show();
     }
   };
 
+  const OnBackButton = () => {
+tg.BackButton.show()
+  }
+
   return {
     onClose,
     OnToggleButton,
+    OnBackButton,
     tg,
     user: tg.initDataUnsafe?.user,
   };
