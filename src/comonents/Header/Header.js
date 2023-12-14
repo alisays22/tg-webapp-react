@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import { useTelegram } from '../../hooks/useTelegram';
 
 const Header = () => {
-const {user, onClose,OnToggleButton,OnBackButton} = useTelegram()
+const {user, onClose,OnToggleButton,OnBackButton,OnProgressButton} = useTelegram()
 
   
     return (
@@ -12,6 +12,7 @@ const {user, onClose,OnToggleButton,OnBackButton} = useTelegram()
             <Button onClick={onClose}>Закрыть</Button>
             <Button onClick={OnToggleButton}>Показать кнопку</Button>
             <Button onClick={OnBackButton}>Загрузка</Button>
+            <Button onClick={OnProgressButton}>Прогресс</Button>
             <span className= {'username'}>
                 {user?.username}
                 </span>

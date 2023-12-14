@@ -29,10 +29,15 @@ tg.close()
 tg.BackButton.show()
   }
 
+  const OnProgressButton = () => {
+    tg.MainButton.isProgressVisible()
+  }
+
   return {
     onClose,
     OnToggleButton,
     OnBackButton,
+    OnProgressButton,
     tg,
     user: tg.initDataUnsafe?.user,
   };
