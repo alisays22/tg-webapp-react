@@ -30,7 +30,7 @@ tg.BackButton.show()
   }
 
   const OnProgressButton = () => {
-    tg.MainButton.isProgressVisible()
+    tg.MainButton.showProgress()
   }
 
   return {
